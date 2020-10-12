@@ -11,13 +11,25 @@ Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
 
-def front_back(a, b):
+''' def solution_one(a, b):
+    # +++ SUA SOLUÇÃO +++
+    a_frente = a[ : int( len(a) / 2 + ( len(a) % 2 ) ) ]
+    a_atras = a[ int( -len(a) / 2 ) : ]
+    b_frente = b[ : int( len(b) / 2 + ( len(b) % 2 ) ) ]
+    b_atras = b[ int( -len(b) / 2 ) : ]
+    return a_frente + b_frente + a_atras + b_atras '''
+
+''' def solution_two(a, b):
     # +++ SUA SOLUÇÃO +++
     a_frente = string_lenght(a)
     a_atras = string_lenght(a, "back")
     b_frente = string_lenght(b)
     b_atras = string_lenght(b, "back")
-    return a_frente + b_frente + a_atras + b_atras
+    return a_frente + b_frente + a_atras + b_atras '''
+
+def front_back(a, b):
+    # +++ SUA SOLUÇÃO +++
+    return ''.join([string_lenght(a), string_lenght(b), string_lenght(a, "back"), string_lenght(b, "back")])
 
 def string_lenght(s, pos="front"):
     lenght = len(s)
